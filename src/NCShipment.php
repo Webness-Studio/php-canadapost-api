@@ -83,11 +83,11 @@ class NCShipment extends ClientBase
 
         $response = $this->post(
             "rs/{$this->customerNumber}/ncshipment",
+            $payload,
             [
                 'Accept' => 'application/vnd.cpc.ncshipment-v4+xml',
                 'Content-Type' => 'application/vnd.cpc.ncshipment-v4+xml',
             ],
-            $payload,
             $options
         );
         return $response;
@@ -216,11 +216,11 @@ class NCShipment extends ClientBase
         $payload = $xml->saveXML();
         $response = $this->post(
             "rs/{$this->config['customer_number']}/ncshipment/{$shipment_id}/refund",
+            $payload,
             [
                 'Content-Type' => 'application/vnd.cpc.ncshipment-v4+xml',
                 'Accept' => 'application/vnd.cpc.ncshipment-v4+xml',
             ],
-            $payload,
             $options
         );
         return $response;

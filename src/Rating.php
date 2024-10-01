@@ -78,11 +78,11 @@ class Rating extends ClientBase
 
         $response = $this->post(
             "rs/ship/price",
+            $payload,
             [
                 'Content-Type' => 'application/vnd.cpc.ship.rate-v3+xml',
                 'Accept' => 'application/vnd.cpc.ship.rate-v3+xml',
             ],
-            $payload,
             $options
         );
 

@@ -88,11 +88,11 @@ class Shipment extends ClientBase
 
         $response = $this->post(
             "rs/{$this->customerNumber}/{$this->customerNumber}/shipment",
+            $payload,
             [
                 'Accept' => 'application/vnd.cpc.shipment-v8+xml',
                 'Content-Type' => 'application/vnd.cpc.shipment-v8+xml',
             ],
-            $payload,
             $options
         );
         return $response;
@@ -223,11 +223,11 @@ class Shipment extends ClientBase
         );
         $response = $this->post(
             $endpoint,
+            $payload,
             [
                 'Content-Type' => 'application/vnd.cpc.shipment-v8+xml',
                 'Accept' => 'application/vnd.cpc.shipment-v8+xml',
             ],
-            $payload,
             $options
         );
         return $response;
@@ -293,11 +293,11 @@ class Shipment extends ClientBase
 
         $response = $this->post(
             "rs/{$this->customerNumber}/{$this->customerNumber}/shipment",
+            $payload,
             [
                 'Accept' => 'application/vnd.cpc.manifest-v8+xml',
                 'Content-Type' => 'application/vnd.cpc.manifest-v8+xml',
             ],
-            $payload,
             $options
         );
         return $response;

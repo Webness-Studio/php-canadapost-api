@@ -155,8 +155,8 @@ abstract class ClientBase
      */
     public function post(
         $endpoint,
-        array $headers = [],
         $payload,
+        array $headers = [],
         array $options = []
     ) {
         $url = $this->baseUrl . '/' . $endpoint;

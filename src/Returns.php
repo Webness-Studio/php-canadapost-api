@@ -84,11 +84,11 @@ class Returns extends ClientBase
 
         $response = $this->post(
             "rs/{$this->customerNumber}/{$this->customerNumber}/authorizedreturn",
+            $payload,
             [
                 'Accept' => 'application/vnd.cpc.authreturn-v2+xml',
                 'Content-Type' => 'application/vnd.cpc.authreturn-v2+xml',
             ],
-            $payload,
             $options
         );
         return $response;
@@ -158,11 +158,11 @@ class Returns extends ClientBase
 
         $response = $this->post(
             "rs/{$this->customerNumber}/{$this->customerNumber}/openreturn",
+            $payload,
             [
                 'Accept' => 'application/vnd.cpc.openreturn-v2+xml',
                 'Content-Type' => 'application/vnd.cpc.openreturn-v2+xml',
             ],
-            $payload,
             $options
         );
         return $response;
