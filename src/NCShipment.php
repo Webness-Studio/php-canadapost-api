@@ -69,9 +69,10 @@ class NCShipment extends ClientBase
         array $sender,
         array $destination,
         array $parcel,
+        string $service_code,
         array $options = []
     ) {
-        $content = $this->buildShipmentArray($sender, $destination, $parcel, $options);
+        $content = $this->buildShipmentArray($sender, $destination, $parcel, $service_code, $options);
 
         $xml = Array2XML::createXML('non-contract-shipment', $content);
         $envelope = $xml->documentElement;
@@ -245,6 +246,7 @@ class NCShipment extends ClientBase
         array $sender,
         array $destination,
         array $parcel,
+        string $service_code,
         array $options = []
     ) {
         $this->formatPostalCode($sender['address-details']['postal-zip-code']);
@@ -252,7 +254,7 @@ class NCShipment extends ClientBase
         $shipment_info = [
             'requested-shipping-point' => $destination['address-details']['postal-zip-code'],
             'delivery-spec' => [
-                'service-code' => $parcel['service_code'],
+                'service-code' => $service_code,
                 'sender' => $sender,
                 'destination' => $destination,
                 'parcel-characteristics' => $parcel,

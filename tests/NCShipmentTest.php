@@ -49,6 +49,7 @@ class NCShipmentTest extends CanadaPostTestBase
             $this->mockAddress(),
             $this->mockAddress(),
             $this->mockParcel(),
+            $this->mockServiceCode(),
             ['handler' => $handler]
         );
 

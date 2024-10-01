@@ -53,8 +53,12 @@ abstract class CanadaPostTestBase extends PHPUnit_Framework_TestCase
                 'length' => '1',
                 'height' => '1',
                 'width' => '1'
-            ],
-            'service_code' => 'DOM.EP'
+            ]
         ];
+    }
+
+    protected function mockServiceCode()
+    {
+        return 'DOM.EP';
     }
 }
