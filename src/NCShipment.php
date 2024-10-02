@@ -199,7 +199,7 @@ class NCShipment extends ClientBase
      * @see https://www.canadapost.ca/cpo/mc/business/productsservices/developers/services/onestepshipping/shipmentrefund.jsf
      * for all available options for the sender,destination and parcel params.
      */
-    public function requestNCShipmentRefund($shipment_id, $email, $options)
+    public function requestNCShipmentRefund($shipment_id, $email, $options = [])
     {
         $content = [
             'email' => $email,
