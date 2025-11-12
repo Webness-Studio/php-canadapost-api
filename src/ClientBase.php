@@ -288,6 +288,7 @@ abstract class ClientBase
             'HFP' => 'Card for pickup (HFP)',
             'DNS' => 'Do not safe drop (DNS)',
             'LAD' => 'Leave at door - do not card (LAD)',
+            'COD' => 'Cash on delivery (COD)',
         ];
     }
 
