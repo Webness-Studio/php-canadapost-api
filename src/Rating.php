@@ -60,8 +60,8 @@ class Rating extends ClientBase
             $content['services']['service-code'] = $this->parseServiceCodes($options);
         }
 
-        if (!empty($options['option_codes'])) {
-            $content['options']['option'] = $this->parseOptionCodes($options);
+        if (!empty($options['options'])) {
+            $shipment_info['options'] = $options['options'];
         }
 
         if (!empty($this->config['contract_id'])) {

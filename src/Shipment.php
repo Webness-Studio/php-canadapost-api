@@ -279,8 +279,8 @@ class Shipment extends ClientBase
             'manifest-address' => $manifest_address,
         ];
 
-        if (!empty($options['option_codes'])) {
-            $content['options']['option'] = $this->parseOptionCodes($options);
+        if (!empty($options['options'])) {
+            $shipment_info['options'] = $options['options'];
         }
 
         $xml = Array2XML::createXML('transmit-set', $content);
@@ -434,8 +434,8 @@ class Shipment extends ClientBase
             ],
         ];
 
-        if (!empty($options['option_codes'])) {
-            $shipment_info['options']['option'] = $this->parseOptionCodes($options);
+        if (!empty($options['options'])) {
+            $shipment_info['options'] = $options['options'];
         }
 
         return $shipment_info;

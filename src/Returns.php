@@ -146,8 +146,8 @@ class Returns extends ClientBase
             ],
         ];
 
-        if (!empty($options['option_codes'])) {
-            $return_info['options']['option'] = $this->parseOptionCodes($options);
+        if (!empty($options['options'])) {
+            $shipment_info['options'] = $options['options'];
         }
 
         $xml = Array2XML::createXML('open-return', $content);
@@ -313,8 +313,8 @@ class Returns extends ClientBase
             'parcel-characteristics' => $parcel,
         ];
 
-        if (!empty($options['option_codes'])) {
-            $return_info['options']['option'] = $this->parseOptionCodes($options);
+        if (!empty($options['options'])) {
+            $shipment_info['options'] = $options['options'];
         }
 
         return $return_info;

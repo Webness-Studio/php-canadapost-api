@@ -264,8 +264,8 @@ class NCShipment extends ClientBase
             ],
         ];
 
-        if (!empty($options['option_codes'])) {
-            $shipment_info['options']['option'] = $this->parseOptionCodes($options);
+        if (!empty($options['options'])) {
+            $shipment_info['options'] = $options['options'];
         }
 
         return $shipment_info;
